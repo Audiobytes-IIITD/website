@@ -1,19 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import about from './components/about';
-import home from './components/home';
-import join from './components/join';
-import members from './components/members';
+import About from './components/about';
+import Home from './components/home';
+import Join from './components/join';
+import Members from './components/members';
 
 
 function App() {
   return (
     <div className="App">
-      <home/>
-      <about/>
-      <members/>
-      <join/>
+      <Home />
+      <About/>
+      <Members/>
+      <Join/>
     </div>
   );
 }
