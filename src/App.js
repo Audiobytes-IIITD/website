@@ -1,19 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-import about from './components/about';
-import home from './components/home';
-import join from './components/join';
-import members from './components/members';
-
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <home/>
-      <about/>
-      <members/>
-      <join/>
+      <NavBar />
     </div>
   );
 }
