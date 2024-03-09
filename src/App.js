@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
       <div className="mt-16">
-        
         <Home />
-        
         <Members />
         <Join />
       </div>
