@@ -6,7 +6,7 @@ function NavBar() {
     const [showMenu, setShowMenu] = React.useState(false);
     return (
 
-        <nav className="fixed top-0 left-0 right-0 flex items-center justify-between bg-slate-800 p-4 rounded-ee-xl rounded-es-xl">
+        <nav className="fixed top-0 left-0 right-0 flex items-center justify-between bg-slate-800 p-4 rounded-ee-xl rounded-es-xl z-10 shadow-sm">
             <div className="flex items-center">
                 <img src="images/icon.svg" alt="icon" className="w-6 h-6" />
                 <h1 className="ml-4 text-white font-bold text-base">AudioBytes</h1>
