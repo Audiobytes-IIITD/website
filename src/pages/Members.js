@@ -1,6 +1,6 @@
 import React from "react";
 
-const members = () => {
+const Members = () => {
     return (
         <div>
         <h1>Members</h1>
@@ -9,4 +9,4 @@ const members = () => {
     );
 };
 
-export default members;
+export default Members;
