@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Join />
+      <div className="mt-16">
+        <Join />
+      </div>
     </div>
   );
 }

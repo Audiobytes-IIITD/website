@@ -3,7 +3,7 @@ import React from "react";
 function NavBar() {
     const [showMenu, setShowMenu] = React.useState(false);
     return (
-        <nav className="flex items-center justify-between bg-slate-800 p-4">
+        <nav className="fixed top-0 left-0 right-0 flex items-center justify-between bg-slate-800 p-4 rounded-ee-xl rounded-es-xl">
             <div className="flex items-center">
                 <img src="images/icon.svg" alt="icon" className="w-6 h-6" />
                 <h1 className="ml-4 text-white font-bold text-base">AudioBytes</h1>
@@ -21,7 +21,7 @@ function NavBar() {
                 <button className="text-white text-sm font-bold bg-cyan-600 rounded-full p-3" onClick={() => {setShowMenu(!showMenu); console.log("Hello")}}>Menu</button>
                 <div className={` flex flex-col fixed top-0 left-0 w-full h-full items-center justify-center bg-slate-800 z-50 ${showMenu ? "block" : "hidden"}`}>
                     <img src="images/close.png" alt="close_menu" className="mt-2 hover:cursor-pointer w-6 h-6 content-between" onClick={() => setShowMenu(false)}/>
-                    <div className="flex flex-col items-center justify-center h-full gap-2 p-2">
+                    <div className="flex flex-col items-center justify-center h-full gap-5 p-2">
                         <a href="/" className="text-white text-sm font-bold">About Us</a>
                         <a href="/" className="text-white text-sm font-bold">Upcoming Events</a>
                         <a href="/" className="text-white text-sm font-bold">Our Music</a>
