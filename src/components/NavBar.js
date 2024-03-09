@@ -19,7 +19,7 @@ function NavBar() {
             <div className="lg:hidden md:hidden">
                 {/* Content for small screens */}
                 <button className="text-white text-sm font-bold bg-cyan-600 rounded-full p-3" onClick={() => {setShowMenu(!showMenu); console.log("Hello")}}>Menu</button>
-                <div className={` flex flex-col fixed top-0 left-0 w-full h-full items-center justify-center bg-slate-800 z-50 ${showMenu ? "block" : "hidden"}`}>
+                <div className={` opacity-95 flex flex-col fixed top-0 left-0 w-full h-full items-center justify-center bg-slate-800 z-50 ${showMenu ? "block" : "hidden"}`}>
                     <img src="images/close.png" alt="close_menu" className="mt-2 hover:cursor-pointer w-6 h-6 content-between" onClick={() => setShowMenu(false)}/>
                     <div className="flex flex-col items-center justify-center h-full gap-5 p-2">
                         <a href="/" className="text-white text-sm font-bold">About Us</a>
