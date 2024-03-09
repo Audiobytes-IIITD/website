@@ -4,9 +4,9 @@ import "./join.css";
 
 const Join = () => {
   return (
-    <div className="join">
+    <div className="join " id="joinus">
         {/* <NavBar /> */}
-      <div className="card">
+      <div className="card ">
         <h1>Join AudioBytes</h1>
         <form className="form">
           <p className="line">First Name</p>
