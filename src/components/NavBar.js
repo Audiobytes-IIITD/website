@@ -5,12 +5,6 @@ function NavBar() {
     return (
         <nav className="flex items-center justify-between bg-slate-800 p-4">
             <div className="flex items-center">
-<<<<<<< HEAD
-=======
-                {/* <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" src='images/icon.svg' ">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg> */}
->>>>>>> f6d782f0b93e33b073628951d63d8c090fca58f0
                 <img src="images/icon.svg" alt="icon" className="w-6 h-6" />
                 <h1 className="ml-4 text-white font-bold text-base">AudioBytes</h1>
             </div>
