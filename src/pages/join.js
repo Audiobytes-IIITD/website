@@ -1,38 +1,52 @@
 import React from "react";
 import "./join.css";
 
-
 const Join = () => {
   return (
-    <div className="join " id="joinus">
-        {/* <NavBar /> */}
-      <div className="card ">
-        <h1>Join AudioBytes</h1>
+    <div className="join" id="joinus">
+      <div className="card">
+        <h1 className="join-heading ">Join AudioBytes</h1>
         <form className="form">
-          <p className="line">First Name</p>
-          <input type="text" placeholder="Enter your First Name" name="fname" />
-          <p className="line">Last Name</p>
-          <input type="text" placeholder="Enter your Last Name" name="lname" />
-          <p className="line">Email</p>
-          <input type="text" placeholder="Enter your Email" name="email" />
-          <p className="line">Phone Number</p>
-          <input type="text" placeholder="Enter your phone number" name="phone" />
-          <p className="line">Role</p>
-          <input type="text" placeholder="Singer" name="role" />
-          <p className="line">Musical Interests</p>
-          <textarea
-              placeholder="Tell us about your musical interests"
+          <div className="input-group">
+            <label htmlFor="fname">First Name</label>
+            <input type="text" id="fname" name="fname" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input type="text" id="email" name="email" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="role">Role</label>
+            <input type="text" id="role" name="role" />
+          </div>
+          <div className="input-group">
+            <label htmlFor="musical-interest">Musical Interests</label>
+            <textarea
+              id="musical-interest"
               name="musical interest"
+              placeholder="Tell us about your musical interests"
               className="musical-interest-input"
-          ></textarea>
-          <p className="line">Experience Level</p>
-          <textarea
-              placeholder="Tell us about your experience level"
+            ></textarea>
+          </div>
+          <div className="input-group">
+            <label htmlFor="experience-level">Experience Level</label>
+            <textarea
+              id="experience-level"
               name="experience level"
+              placeholder="Tell us about your experience level"
               className="experience-level"
-          ></textarea>
+            ></textarea>
+          </div>
 
-          <div className="button-container" >
+          <div className="button-container">
             <button className="submit">Submit</button>
             <button className="cancel">Cancel</button>
           </div>
