@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div className="about" id="aboutUs">
       <h1 className="text-white text-4xl font-bold">About Us</h1>
-      <div className="carousel">
+      <div className="carousel ">
         <div
           className="carousel-inner"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}

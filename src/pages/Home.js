@@ -1,5 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
+
 
 const Home = () => {
   return (
@@ -13,22 +14,30 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
+          <Link to="aboutUs" activeClass='active' style={{cursor:'pointer'}} spy={true} smooth={true}>
+          <div className="w-64 h-32 bg-gray-800 rounded-lg hover:bg-gray-700 flex flex-col justify-center items-center text-white font-bold">
+            About Us
+            <p className="text-xs">Learn about AudioBytes</p>
+          </div></Link>
+        
           <div className="w-64 h-32 bg-gray-800 rounded-lg hover:bg-gray-700 flex flex-col justify-center items-center text-white font-bold">
             Upcoming Events
             <p className="text-xs">View all moshing events</p>
           </div>
+          <Link to="members" activeClass='active' style={{cursor:'pointer'}} spy={true} smooth={true}>
           <div className="w-64 h-32 bg-gray-800 rounded-lg hover:bg-gray-700 flex flex-col justify-center items-center text-white font-bold">
-            Our Music
-            <p className="text-xs">Listen to our music </p>
+            Our Members
+            <p className="text-xs">Meet Our Coordinators </p>
           </div>
-          <div className="w-64 h-32 bg-gray-800 rounded-lg hover:bg-gray-700 flex flex-col justify-center items-center text-white font-bold">
-            About Us
-            <p className="text-xs">Learn about AudioBytes</p>
-          </div>
+          </Link>
+          
+          <Link to ="joinus" activeClass='active' spy={true} smooth={true} style={{cursor:'pointer'}}>
           <div className="w-64 h-32 bg-gray-800 rounded-lg hover:bg-gray-700 flex flex-col justify-center items-center text-white font-bold">
             Join US
             <p className="text-xs">Join our Club</p>
           </div>
+          </Link>
+          
         </div>
         <div className="flex justify-center gap-4 flex-wrap">
           <img src="images/eventImage1.png" alt="Image 1" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
