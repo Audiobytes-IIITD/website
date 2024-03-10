@@ -10,7 +10,7 @@ const Home = () => {
     <div className="bg-slate-900 flex justify-center items-center content-container pt-16">
       <div className="flex flex-col gap-10">
         <div className="">
-          <img src={bandImage} alt="Band" className="w-full" style={{ width: '1200px', height: '500px' }} />
+          <img src={bandImage} alt="Band" className="w-full object-cover" style={{ width: '1200px', height: '500px' }} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
             <h1 className="text-3xl font-bold">Welcome to AudioBytes</h1>
             <p className="text-sm">MUSIC CLUB OF IIITD</p>
