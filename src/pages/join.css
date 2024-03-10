@@ -1,101 +1,85 @@
 .join {
-    background-color: #0F1A24;
+    background-color: #0f172a;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  .card {
-    margin-top: 20px;
+    padding-top: 0px;
+    margin-top: 100px;
+}
+
+.card {
+    margin-top: 20px; 
     width: 80%;
     max-width: 500px;
+    overflow: auto;
     padding: 20px;
-    background-color: #21364a;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .join-heading {
-      
-          color: white;
-          font-weight: bold; 
-        
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-  }
-  
-  .join-heading::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 80px;
-    height: 2px;
-    background-color: #0d7df2;
-    transform: translateX(-50%);
-  }
-  
-  .form {
+}
+
+.join .form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  
-  .input-group {
+}
+
+.join h1 {
+    color: white;
     margin-bottom: 20px;
-    width: 100%;
-  }
-  
-  label {
+    text-align: left;
+    z-index: 1001;
+}
+
+.join .line {
+    color: white;
     margin-bottom: 5px;
-    color: #ffffff;
-  }
-  
-  input[type="text"],
-  textarea {
+}
+
+.join input[type="text"],
+.join textarea {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #21364a;
-    color: #ffffff;
-  }
-  
-  .button-container {
+    background-color: #21364A;
+    color: white;
+    border: none;
+}
+
+.musical-interest-input,
+.experience-level {
+    min-height: 100px;
+}
+
+.button-container {
     display: flex;
     justify-content: flex-end;
+    margin-top: 20px;
     width: 100%;
-  }
-  
-  button {
+}
+
+.button-container button {
     margin-left: 10px;
     padding: 10px 20px;
-    color: #ffffff;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
-  }
-  
-  .submit {
-    background-color: #0d7df2;
-  }
-  
-  .cancel {
-    background-color: #555555;
-  }
-  
-  @media only screen and (max-width: 600px) {
+}
+
+.button-container .submit {
+    background-color: #0D7DF2;
+}
+
+.button-container .cancel {
+    background-color: #21364A;
+}
+
+@media only screen and (max-width: 600px) {
     .join {
-      padding: 20px;
+        padding: 20px;
     }
     .card {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
