@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
-    <div className="bg-slate-900 pt-8 flex justify-center items-center content-container pt-16">
+    <div className="bg-slate-900 flex justify-center items-center content-container pt-16">
       <div className="flex flex-col gap-10">
         <div className="">
           <img src={bandImage} alt="Band" className="w-full" style={{ width: '1200px', height: '500px' }} />
@@ -34,7 +34,7 @@ const Home = () => {
             <p className="text-xs">Join our Club</p>
           </div>
         </div>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 flex-wrap">
           <img src={eventImage1} alt="Image 1" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
           <img src={eventImage2} alt="Image 2" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
           <img src={eventImage3} alt="Image 3" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
