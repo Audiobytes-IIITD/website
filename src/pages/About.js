@@ -1,58 +1,79 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'bootstrap';
-import React from "react";
-import "./About.css";
+import React, { useState } from "react";
+import "./about.css";
 import img1 from "../../images/odd3.jpg";
 import img2 from "../../images/odd1.jpg";
 import img3 from "../../images/odd2.jpg";
-import insta from "../../images/instagram.png"
-
-
-
+import insta from "../../images/instagram.png";
 
 const About = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) => (prevIndex === 0 ? 2 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex === 2 ? 0 : prevIndex + 1));
+  };
+
   return (
     <div className="about">
-      <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src={img1} class="d-block w-100" alt="..." />
+      <div className="carousel">
+        <div
+          className="carousel-inner"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          <div className="carousel-item">
+            <img src={img1}  />
           </div>
-          <div class="carousel-item">
-            <img src={img2} class="d-block w-100" alt="..." />
+          <div className="carousel-item">
+            <img src={img2} />
           </div>
-          <div class="carousel-item">
-            <img src={img3} class="d-block w-100" alt="..." />
+          <div className="carousel-item">
+            <img src={img3}  />
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button
+          className="carousel-control-prev"
+          onClick={handlePrev}
+          aria-label="Previous"
+        >
+          &#10094;
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button
+          className="carousel-control-next"
+          onClick={handleNext}
+          aria-label="Next"
+        >
+          &#10095;
         </button>
       </div>
 
-      <h1>
-        About Us
-      </h1>
+      <h1>About Us</h1>
 
-      <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+      <h3>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only
+        five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with
+        the release of Letraset sheets containing Lorem Ipsum passages, and
+        more recently with desktop publishing software like Aldus PageMaker
+        including versions of Lorem Ipsum.
+      </h3>
 
       <hr />
 
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-        <h4>Follow us on : </h4>
-          <a href='https://www.instagram.com/audiobytesiiitd/' >
+          <h4>Follow us on:</h4>
+          <a href="https://www.instagram.com/audiobytesiiitd/">
             <img src={insta} alt="Instagram" />
           </a>
         </div>
       </footer>
-
     </div>
   );
 };
