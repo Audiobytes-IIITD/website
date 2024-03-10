@@ -1,5 +1,4 @@
-
-.carousel {
+#carousel {
     width: 80%;
     margin: auto;
     margin-top: 50px;
@@ -7,24 +6,28 @@
     overflow: hidden;
   }
   
-  .carousel-inner {
+  #carousel-inner {
     display: flex;
     transition: transform 2s ease;
   }
   
-  .carousel-item {
+  #carousel-item1,
+  #carousel-item2,
+  #carousel-item3 {
     width: 100%;
     flex: 0 0 auto;
   }
   
-  .carousel-item img {
+  #carousel-item1 img,
+  #carousel-item2 img,
+  #carousel-item3 img {
     width: 100%;
     height: 500px;
     object-fit: cover;
   }
   
-  .carousel-control-prev,
-  .carousel-control-next {
+  #carousel-control-prev,
+  #carousel-control-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -36,16 +39,16 @@
     z-index: 1;
   }
   
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  #carousel-control-prev-icon,
+  #carousel-control-next-icon {
     color: white;
   }
   
-  .carousel-control-prev {
+  #carousel-control-prev {
     left: 20px; 
   }
   
-  .carousel-control-next {
+  #carousel-control-next {
     right: 20px; 
   }
   
@@ -70,7 +73,7 @@
     margin-top: 77px; 
   }
   
-  .navbar {
+  #navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -91,7 +94,7 @@
     font-size:x-large;
   }
   
-  .footer {
+  #footer {
     background-color: #0F1A24;
     color: #fff;
     padding: 20px 0;
@@ -100,7 +103,7 @@
     width: 100%;
   }
   
-  .footer .container {
+  #footer-container {
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -112,12 +115,12 @@
     border: 2px solid white;
   }
   
-  .footer h4 {
+  #footer h4 {
     margin-top: 0px;
     margin-bottom: 30px;
   }
   
-  .footer img {
+  #footer img {
     height: 30px;
     width: 30px;
     margin: 0 5px; 
