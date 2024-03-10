@@ -17,31 +17,33 @@ const About = () => {
   };
 
   return (
-    <div className="about">
-      <div className="carousel">
+    <div id="about" className="about">
+      <div id="carousel" style={{ width: "80%", margin: "auto", marginTop: "50px", position: "relative", overflow: "hidden" }}>
         <div
-          className="carousel-inner"
-          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+          id="carousel-inner"
+          style={{ display: "flex", transition: "transform 2s ease", transform: `translateX(-${activeIndex * 100}%)` }}
         >
-          <div className="carousel-item">
-            <img src={img1}  />
+          <div id="carousel-item1" style={{ width: "100%", flex: "0 0 auto" }}>
+            <img src={img1} alt="Image 1" />
           </div>
-          <div className="carousel-item">
-            <img src={img2} />
+          <div id="carousel-item2" style={{ width: "100%", flex: "0 0 auto" }}>
+            <img src={img2} alt="Image 2" />
           </div>
-          <div className="carousel-item">
-            <img src={img3}  />
+          <div id="carousel-item3" style={{ width: "100%", flex: "0 0 auto" }}>
+            <img src={img3} alt="Image 3" />
           </div>
         </div>
         <button
-          className="carousel-control-prev"
+          id="carousel-control-prev"
+          style={{ position: "absolute", top: "50%", transform: "translateY(-50%)", background: "transparent", border: "none", cursor: "pointer", fontSize: "30px", color: "white", zIndex: "1", left: "20px" }}
           onClick={handlePrev}
           aria-label="Previous"
         >
           &#10094;
         </button>
         <button
-          className="carousel-control-next"
+          id="carousel-control-next"
+          style={{ position: "absolute", top: "50%", transform: "translateY(-50%)", background: "transparent", border: "none", cursor: "pointer", fontSize: "30px", color: "white", zIndex: "1", right: "20px" }}
           onClick={handleNext}
           aria-label="Next"
         >
@@ -66,8 +68,8 @@ const About = () => {
       <hr />
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="container">
+      <footer id="footer">
+        <div id="footer-container">
           <h4>Follow us on:</h4>
           <a href="https://www.instagram.com/audiobytesiiitd/">
             <img src={insta} alt="Instagram" />
