@@ -50,7 +50,10 @@
     margin-bottom: 20px;
     width: 100%;
   }
-  
+  .input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: white;
+}
   label {
     margin-bottom: 5px;
     color: #ffffff;
@@ -87,6 +90,10 @@
   }
   
   .cancel {
+    background-color: #555555;
+  }
+
+  #show{
     background-color: #555555;
   }
   
