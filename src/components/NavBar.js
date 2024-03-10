@@ -8,13 +8,15 @@ function NavBar() {
 
         <nav className="fixed top-0 left-0 right-0 flex items-center justify-between bg-slate-800 p-4 rounded-ee-xl rounded-es-xl z-10 shadow-sm min-w-80">
             <div className="flex items-center">
-                <img src="images/icon.svg" alt="icon" className="w-6 h-6" />
-                <h1 className="ml-4 text-white font-bold text-base">AudioBytes</h1>
+                <img src="images/abWhite300.png" alt="icon" className="w-16 h-16 content-stretch" />
+                <h1 className="text-white font-bold text-base">AudioBytes</h1>
             </div>
             <div className="xs:hidden sm:hidden md:flex lg:flex items-center xxs:hidden">
                 {/* Content for large screens */}
 
-                <a href="/" className="text-white mr-8 text-sm font-bold">About Us</a>
+                <Link to='aboutUs' activeClass='active' style={{ cursor: 'pointer' }} spy={true} smooth={true}>
+                    <div className="text-white text-sm font-bold mr-8" onClick={() => { setShowMenu(!showMenu) }}>About Us</div>
+                </Link>
                 <a href="/" className="text-white mr-8 text-sm font-bold">Upcoming Events</a>
                 <Link to='members' activeClass='active' style={{ cursor: 'pointer' }} spy={true} smooth={true}>
                     <div className="text-white mr-8 text-sm font-bold">Our Members</div>
@@ -35,7 +37,9 @@ function NavBar() {
                 <div className={` opacity-95 flex flex-col fixed top-0 left-0 w-full h-full items-center justify-center bg-slate-800 z-50 ${showMenu ? "block" : "hidden"}`}>
                     <img src="images/close.png" alt="close_menu" className="mt-2 hover:cursor-pointer w-6 h-6 content-between" onClick={() => setShowMenu(false)} />
                     <div className="flex flex-col items-center justify-center h-full gap-5 p-2">
-                        <a href="/" className="text-white text-sm font-bold" onClick={() => { setShowMenu(!showMenu) }}>About Us</a>
+                        <Link to='aboutUs' activeClass='active' style={{ cursor: 'pointer' }} spy={true} smooth={true}>
+                            <div className="text-white text-sm font-bold mr-8" onClick={() => { setShowMenu(!showMenu) }}>About Us</div>
+                        </Link>
                         <a href="/" className="text-white text-sm font-bold" onClick={() => { setShowMenu(!showMenu) }}>Upcoming Events</a>
                         <Link to='members' activeClass='active' style={{ cursor: 'pointer' }} spy={true} smooth={true}>
                             <div className="text-white text-sm font-bold" onClick={() => { setShowMenu(!showMenu) }}>Our Members</div>

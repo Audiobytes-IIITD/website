@@ -11,6 +11,7 @@ function App() {
       <NavBar />
       <div className="mt-16">
         <Home />
+        <About />
         <Members />
         <Join />
       </div>

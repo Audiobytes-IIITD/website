@@ -1,16 +1,12 @@
 import React from 'react';
-import bandImage from '../assets/HomeImage.jpg';
-import eventImage1 from '../assets/eventImage1.png';
-import eventImage2 from '../assets/eventImage2.png';
-import eventImage3 from '../assets/eventImage3.png';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
     <div className="bg-slate-900 flex justify-center items-center content-container pt-16">
       <div className="flex flex-col gap-10">
         <div className="">
-          <img src={bandImage} alt="Band" className="w-full object-cover" style={{ width: '1200px', height: '500px' }} />
+          <img src="images/HomeImage.jpg" alt="Band" className="w-full object-cover" style={{ width: '1200px', height: '500px' }} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
             <h1 className="text-3xl font-bold">Welcome to AudioBytes</h1>
             <p className="text-sm">MUSIC CLUB OF IIITD</p>
@@ -35,9 +31,9 @@ const Home = () => {
           </div>
         </div>
         <div className="flex justify-center gap-4 flex-wrap">
-          <img src={eventImage1} alt="Image 1" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
-          <img src={eventImage2} alt="Image 2" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
-          <img src={eventImage3} alt="Image 3" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
+          <img src="images/eventImage1.png" alt="Image 1" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
+          <img src="images/eventImage2.png" alt="Image 2" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
+          <img src="images/eventImage3.png" alt="Image 3" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
         </div>
       </div>
     </div>
