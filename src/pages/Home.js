@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-
+import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
@@ -8,10 +9,17 @@ const Home = () => {
       <div className="flex flex-col gap-10">
         <div className="">
           <img src="images/HomeImage.jpg" alt="Band" className="w-full object-cover" style={{ width: '1200px', height: '500px' }} />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-            <h1 className="text-3xl font-bold">Welcome to AudioBytes</h1>
+          <motion.div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+            <h1 className="text-3xl font-bold">
+            <TypeAnimation sequence={['Welcome to AudioBytes', 2000," ",10]}
+                speed={50}
+                repeat={Infinity}
+                className='text-accent'
+                wrapper='span'></TypeAnimation>
+            </h1>
+            
             <p className="text-sm">MUSIC CLUB OF IIITD</p>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
           <Link to="aboutUs" activeClass='active' style={{cursor:'pointer'}} spy={true} smooth={true}>
