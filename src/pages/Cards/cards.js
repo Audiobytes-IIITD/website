@@ -9,7 +9,6 @@ const Cards = () => {
     };
 
     return (
-        <div className="container">
             <div className="card-container">
                 <div className={`card background1 ${activeCard === 0 ? 'active' : ''}`} onClick={() => handleCardClick(0)}>
                     <div className="shadow">
@@ -97,7 +96,6 @@ const Cards = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 
