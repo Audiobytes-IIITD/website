@@ -4,7 +4,7 @@ import video from '../../videos/vid.mp4';
 
 const Home = () => {
   return (
-    <div>
+    <div id='home'>
       <div className="bg-EFEAE3 flex justify-center items-center content-container pt-16" style={{ height: '100vh' }}>
         <div className="flex flex-col gap-10">
           <div className="">
