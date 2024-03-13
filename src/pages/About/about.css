@@ -1,0 +1,68 @@
+body {
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
+  overflow-y: scroll; 
+}
+
+::-webkit-scrollbar {
+  width: 5px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+}
+
+.about {
+  background-color: black;
+  padding-top: 50px;
+  position: relative;
+  margin-top: 77px; 
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+
+#content {
+  margin-top: 0px;
+  color: white;
+  margin: 50px 70px;
+  font-size: large;
+  padding-bottom: 5px;
+}
+
+
+#aboutUs h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 9px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  margin-top: 20px; 
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px; 
+}
+
+#aboutUs h1:hover {
+  letter-spacing: 20px;
+}
+
+#aboutUs h1::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
