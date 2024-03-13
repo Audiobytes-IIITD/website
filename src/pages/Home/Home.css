@@ -1,0 +1,104 @@
+#hero-shape{
+    position: absolute;
+    width: 26vw;
+    height: 6vw;
+    right: 0;
+    top: 65vh;
+    z-index: -1;
+}
+
+
+@keyframes anime1 {
+    from{
+        transform: translate(-55%,-4%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+}
+#hero-1{
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2{
+    background: linear-gradient(#FE320A, #fe3f0a);
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#hero-3{
+    background: linear-gradient(#FE320A,#fe3f0a);
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+#home-container {
+    background-color: #EFEAE3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+  }
+  
+  #content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #image-section {
+    position: relative; 
+  }
+  
+  #band-image {
+    width: 100%; 
+    max-width: 1200px; 
+    height: 500px;
+    object-fit: cover; 
+  }
+  
+  #overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  #welcome-title {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #subtitle {
+    font-size: 2rem;
+  }
+  
+  video{
+    top: 1200px;
+  }
