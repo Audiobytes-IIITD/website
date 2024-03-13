@@ -15,11 +15,7 @@ const Home = () => {
 
         <video autoPlay loop muted src={video} ></video>
 
-        <div className="flex justify-center gap-4 flex-wrap">
-          <img src="images/eventImage1.png" alt="Image 1" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
-          <img src="images/eventImage2.png" alt="Image 2" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
-          <img src="images/eventImage3.png" alt="Image 3" className="w-64 h-32 rounded-lg" style={{ width: '300px', height: '200px' }} />
-        </div>
+        
       </div>
 
       
