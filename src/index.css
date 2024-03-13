@@ -2,16 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: neue;
+  font-weight: 200;
+  src: url(../src/Fonts/NeueHaasDisplayLight.ttf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'neue';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: black;
+  line-height: 1.5;
+  letter-spacing: 1px;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
