@@ -1,38 +1,79 @@
 .members-container {
     background-color: black;
-    color: white; 
+    color: white;
     padding-top: 4rem;
+    overflow: hidden; 
 }
 
 .members-content {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center; 
-    padding: 0 1rem; 
-    margin-bottom: 500px; 
+    justify-content: center;
+    padding: 0 1rem;
+    margin-bottom: 50px;
 }
 
 .members-title {
     font-size: 2rem;
     font-weight: bolder;
-    text-align: center; 
-    margin-bottom: 1rem; 
-    width: 100%; 
-    margin-left: 3px; 
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.member-card {
+    flex: 1 0 calc(25% - 1rem); /* Adjust width for member cards with gap */
+    max-width: calc(25% - 1rem); /* Limit maximum width to maintain 4 cards per row */
+    margin-bottom: 1rem; /* Adds gap below each row of member cards */
 }
 
 @media only screen and (max-width: 768px) {
     .members-content {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .members-title {
-        margin-left: 0; 
+        margin-left: 0;
     }
 
     .members-container {
         margin-bottom: 200px;
     }
+
+    .member-card {
+        flex: 1 0 100%; /* Full width for member cards on smaller screens */
+        max-width: none; /* Remove max-width constraint on smaller screens */
+    }
+}
+
+#title {
+    color: hsl(0, 0%, 100%);
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 9px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+#title:hover {
+    letter-spacing: 20px;
+}
+
+#title::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
