@@ -1,0 +1,171 @@
+body h1 {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    letter-spacing: 9px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+body h1:hover {
+    letter-spacing: 10px;
+}
+
+body h1::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #3b4b47;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; 
+}
+
+.card-container > .card {
+    height: 360px;
+    min-width: 60px;
+    width: 25%;
+    border-radius: 40px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all 0.75s cubic-bezier(0.59, 0.03, 0.07, 1);
+    background-size: auto 130%;
+    background-position: 50% 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+}
+
+.card-container > .card.active {
+    width: 95%;
+    transform: scaleY(1.05);
+    background-size: auto 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.card.background1 {
+    background-image: url("/src/images/eventImage1.png");
+}
+
+.card.background2 {
+    background-image: url("/src/images/eventImage2.png");
+}
+
+.card.background3 {
+    background-image: url("/src/images/eventImage3.png");
+}
+
+.card.background4 {
+    background-image: url("/src/images/eventImage1.png");
+}
+
+.card.background5 {
+    background-image: url("/src/images/eventImage2.png");
+}
+
+.card .shadow {
+    height: 80px;
+    width: 100%;
+    padding-top: 25px;
+    transition: all 0.75s cubic-bezier(0.59, 0.03, 0.07, 1);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.card.active .shadow {
+    padding-top: 20px;
+}
+
+.card .shadow .about-container {
+    display: flex;
+    min-width: 400px;
+}
+
+.card .shadow .about-container .logo {
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: all 0.75s cubic-bezier(0.59, 0.03, 0.07, 1);
+}
+
+.card.background1 .shadow .about-container .logo i {
+    color: #f893b9;
+}
+
+.card.background2 .shadow .about-container .logo i {
+    color: #762448;
+}
+
+.card.background3 .shadow .about-container .logo i {
+    color: #f5af8e;
+}
+
+.card.background4 .shadow .about-container .logo i {
+    color: #3b4b47;
+}
+
+.card.background5 .shadow .about-container .logo i {
+    color: #12ade7;
+}
+
+.card.active .shadow .about-container .logo {
+    margin-left: 20px;
+}
+
+.card .shadow .about-container .about {
+    padding-left: 35px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.75s cubic-bezier(0.59, 0.03, 0.07, 1);
+}
+
+.card.active .shadow .about-container .about {
+    padding-left: 10px;
+    opacity: 1;
+}
+
+.card .shadow .about-container .about .name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card-container > .card {
+        min-width: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card-container > .card {
+        min-width: 150px;
+        margin-left: 0px; 
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .card-container {
+        margin-left: 325px; 
+    }
+}
