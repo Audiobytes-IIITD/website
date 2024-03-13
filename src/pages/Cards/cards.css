@@ -1,49 +1,28 @@
-body h1 {
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
-    letter-spacing: 9px;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-}
 
-body h1:hover {
-    letter-spacing: 10px;
-}
-
-body h1::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 3px;
-    border-radius: 5px;
-    background-color: #3b4b47;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 .card-container {
-    margin: 0 auto;
-    padding: 0 20px;
+    margin-top: 0px;
     max-width: 100%;
     height: 400px;
     display: flex;
     align-items: center;
-    overflow-x: auto; 
+    overflow-x: auto;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 0px;
 }
 
 .card-container > .card {
     height: 360px;
     min-width: 60px;
-    width: 25%;
+    width: 1%;
     border-radius: 40px;
     margin: 10px;
     cursor: pointer;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    transition: all 0.75s cubic-bezier(0.59, 0.03, 0.07, 1);
+    transition: all 2s cubic-bezier(0.59, 0.03, 0.07, 1);
     background-size: auto 130%;
     background-position: 50% 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
@@ -158,14 +137,22 @@ body h1::before {
 }
 
 @media only screen and (max-width: 768px) {
+    .card-container {
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: flex-start; 
+    }
+
     .card-container > .card {
         min-width: 150px;
-        margin-left: 0px; 
+        margin-left: 0;
     }
 }
 
+
 @media only screen and (min-width: 992px) {
     .card-container {
-        margin-left: 325px; 
+        margin-left: 0;
     }
 }
+
