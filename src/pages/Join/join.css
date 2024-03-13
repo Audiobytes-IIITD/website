@@ -1,0 +1,125 @@
+.join {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.card {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.join-heading {
+  color: white;
+  font-weight: bolder; 
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  letter-spacing: 1.5px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative; 
+}
+
+.input-group input,
+.input-group textarea {
+  border: none;
+  border-bottom: 1px solid white; 
+  background-color: transparent; 
+  color: white;
+  padding: 10px 0; 
+  width: 100%; 
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #ffffff;
+  transition: all 0.3s ease; 
+}
+
+.input-group label {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.input-group.underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: blue; 
+  transition: width 0.3s ease; 
+}
+
+.input-group.underline:hover::before {
+  width: 100%; 
+}
+
+.input-group.hide label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: white;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: blue;
+}
+
+.cancel {
+  background-color: darkgray;
+}
+
+#show {
+  background-color: darkgrey;
+}
+
+@media only screen and (max-width: 600px) {
+  .join {
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+}
