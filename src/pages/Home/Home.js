@@ -35,8 +35,8 @@ const Home = () => {
         <div className="flex flex-col gap-10">
           <div className="">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-black">
-              <h1 className="text-2xl md:text-5xl font-bold mb-4" style={{ color: 'white', fontSize: '5rem' }}>Welcome to AudioBytes</h1>
-              <h2 className="text-sm md:text-xl" style={{ color: 'white', fontSize: '2rem', marginTop: '20px' }}>MUSIC CLUB OF IIITD</h2>
+              <h1 id='heading'>Welcome to AudioBytes</h1>
+              <h2 id='sub-heading'>MUSIC CLUB OF IIITD</h2>
               <span className='text-sm md:text-xl'style={{ color: 'white', fontSize: '7rem', marginTop: '20px' }}>   </span>
               <span className="text" style={{ color: '#f1e728', fontSize: '7rem', marginTop: '20px' , fontWeight: 'bold'}}></span>
             </div>
