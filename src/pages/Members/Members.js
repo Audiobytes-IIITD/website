@@ -5,7 +5,7 @@ import image from '../../images/man.png';
 
 function Members() {
     return (
-        <div className="members-container">
+        <div className="members-container" id="members">
             <h1 className="members-title" id="title">Members Profile</h1>
             <div className="members-content">
                 <MemberCard name="Anish" role="Web Developer" email="anish22075@iiitd.ac.in" image={image} />
