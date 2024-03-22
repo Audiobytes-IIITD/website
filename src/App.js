@@ -6,6 +6,7 @@ import Members from "../src/pages/Members/Members";
 import About from "../src/pages/About/About";
 import Home from "../src/pages/Home/Home";
 import Preloader from "./pages/PreLoader/Preloader";
+import Room from "./pages/Music Room/room";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
             <Home />
             <About />
             <Members />
+            <Room />
             <Join />
           </div>
         </div>
