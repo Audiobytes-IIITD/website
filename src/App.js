@@ -7,6 +7,7 @@ import About from "../src/pages/About/About";
 import Home from "../src/pages/Home/Home";
 import Preloader from "./pages/PreLoader/Preloader";
 import Room from "./pages/Music Room/room";
+import { BrowserRouter , Route, Routes } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,9 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<div  className="App">
       {loading ? (
         <Preloader />
       ) : (
@@ -30,12 +33,16 @@ function App() {
             <Home />
             <About />
             <Members />
-            <Room />
+            
             <Join />
           </div>
         </div>
       )}
-    </div>
+    </div>}/>
+      <Route path="/Room" element={<Room/>}/>
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 

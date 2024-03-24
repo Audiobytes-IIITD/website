@@ -7,7 +7,7 @@ const Room = () => {
     return (
         <div className="room">
             <div className="room-container">
-                <h1 id="room-title">Access Music Room</h1>
+                <h1 id="room-title" style={{display:"flex",alignItems:"center"}}>Access Music Room</h1>
                 
                 <div className="login-box">
                     <form>
