@@ -2,212 +2,115 @@
     min-height: 70vh;
     background-color:black;
 }
-  .room-container {
-    font-family: sans-serif;
-  }
 
-  #room-title {
-    color: hsl(0, 0%, 100%);
-    font-size: 35px;
-    cursor: pointer;
-    letter-spacing: 9px;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
+#room-title {
+  color: hsl(0, 0%, 100%);
+  font-size: 35px;
+  cursor: pointer;
+  letter-spacing: 9px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 #room-title:hover {
-    letter-spacing: 15px;
+  letter-spacing: 15px;
 }
 
 #room-title::before {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 3px;
-    border-radius: 5px;
-    margin-bottom: 0px;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-  
-  .login-box {
-    position: relative;
-    top: 250px;
-    left: 50%;
-    width: 400px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
-  }
-  
+#room-header hr{
+  margin-bottom: 35px;
+}
 
-  
-  .login-box .user-box {
-    position: relative;
+
+#input-form{
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+justify-content: center;
+align-items: center;
+margin-left: 590px;
+border-radius: 4px;
+}
+
+input::placeholder {
+  color: black ;
+  border: none;
+  font-size: 12px;
+}
+
+#input-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  border: none;
+  height: 35px;
+  outline: none;
+  padding-left: 10px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-left: 580px;
+}
+
+#input-form:focus {
+  border: 5px solid skyblue;
+}
+
+#form-send button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  margin-left: 700px;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+
+#form-send button img{
+  height: 15px;
+}
+
+@media (max-width: 768px) {
+  #input-form {
+      width: 200px;
+      margin-left: 100px;
+      height: 40px;
+  }
+  #room-title{
+    font-size: 20px;
+    margin-left: 0px;
+    
+  }
+  #form-send button{
+    margin-top: 50px;
+    margin-left: 145px;
+    height: 10px;
+    width: 100px;
   }
   
-  .login-box .user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
+  input::placeholder {
+    color: black ;
     border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
+    font-size: 15px;
   }
-  .label {
-    position: absolute;
-    top: 10px; 
-    left: 0;
-    font-size: 16px;
-    color: #ffffff;
-    transition: all 0.3s ease;
-    pointer-events: none;
-  }
-  
-  .input-group input:focus + .label,
-  .input-group input:not(:placeholder-shown) + .label {
-    top: -10px;
-    font-size: 12px;
-    color: #03e9f4;
-  }
-  
-  .user-box input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1); 
 }
-
-
-
-
-
-
-
-  
-  .label.active {
-    top: -10px;
-    font-size: 12px;
-    color: #03e9f4;
-}
-
-#date-label input[type="date"]:placeholder-shown + .label {
-  opacity: 0;
-}
-
-  
-  
-  .login-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
-  }
-  
-  .login-box a:hover {
-    background: #03e9f4;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-  }
-  
-  .login-box a span {
-    position: absolute;
-    display: block;
-  }
-  
-  .login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
-  }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-  }
-  
-  @keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-    50%,100% {
-      top: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-  }
-  
-  @keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-    50%,100% {
-      right: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-  }
-  
-  @keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {
-      bottom: 100%;
-    }
-  }
-
- 
