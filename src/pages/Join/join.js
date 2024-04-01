@@ -51,34 +51,34 @@ const Join = () => {
         <h1 className="join-heading ">Join Us</h1>
         <br />
         <form className="form" method="POST">
-          <div className="input-group underline"> 
+          <div className="input-group "> 
             <label htmlFor="fname">First Name</label>
             <input type="text" id="fname" name="Fname" placeholder="First Name" autoComplete="off" value={user.Fname} required onChange={data}/>
           </div>
-          <div className="input-group underline"> 
+          <div className="input-group "> 
             <label htmlFor="lname">Last Name</label>
             <input type="text" id="lname" name="Lname"placeholder="Last Name" autoComplete="off" value={user.Lname} required onChange={data}/>
           </div>
-          <div className="input-group underline"> 
+          <div className="input-group "> 
             <label htmlFor="email">Email</label>
             <input type="text" id="email" name="Email"placeholder="Email" autoComplete="off" value={user.Email}  required onChange={data}/>
           </div>
-          <div className="input-group underline"> 
+          <div className="input-group "> 
             <label htmlFor="phone">Phone Number</label>
             <input type="text" id="phone" name="Mobile" placeholder="Mobile" autoComplete="off" value={user.Mobile} required onChange={data}/>
           </div>
-          <div className="input-group underline"> 
+          <div className="input-group "> 
             <label htmlFor="musical-interest">Musical Interests</label>
             <textarea id="musical-interest" name="musical_interest" placeholder="Musical Interests" value={user.musical_interest} required onChange={data}></textarea>
           </div>
 
           {showOthers && (
             <>
-              <div className="input-group underline"> 
+              <div className="input-group "> 
                 <label htmlFor="role">Role</label>
                 <input type="text" id="role" name="role" placeholder="Role" autoComplete="off" value={user.role} required onChange={data} />
               </div>
-              <div className="input-group underline"> 
+              <div className="input-group "> 
                 <label htmlFor="experience-level">Experience Level</label>
                 <textarea id="experience-level" name="experience_level" placeholder="Experience Level" value={user.experience_level} required onChange={data}></textarea>
               </div>
