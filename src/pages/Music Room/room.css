@@ -47,6 +47,7 @@
 
 #form-send button{
   display: flex;
+  color: black;
   align-items: center;
   justify-content: center;
   padding: 15px 30px;
@@ -62,6 +63,7 @@
 
 #form-send button img{
   height: 15px;
+  color: black;
 }
 
 @media (max-width: 768px) {
