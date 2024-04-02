@@ -30,8 +30,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div id='home'>
-      <div className="bg-EFEAE3 flex justify-center items-center content-container pt-16" style={{ height: '100vh' }}>
+    <div id='home' >
+      <div className="bg-EFEAE3 flex justify-center items-center content-container pt-0" style={{ height: '100vh' }}>
         <div className="flex flex-col gap-10">
           <div className="">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-black">
