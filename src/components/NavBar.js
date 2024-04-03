@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../images/abWhite300.png";
 import hamburger from "../images/menu-4-64.png";
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import cross from "../images/closee.png";
+import { Link as ScrollLink } from 'react-scroll';
 
 function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -33,15 +34,16 @@ function NavBar() {
 
     return (
         <div id="nav-container" style={{ position: 'relative', zIndex: '10'}} >
-            <div id="image-logo">
-                <img src={logo} />
-            </div>
             <nav>
                 <input type="checkbox" id="check" checked={menuOpen} onChange={handleMenuToggle} />
                 <label htmlFor="check" className="checkbtn">
-                    <img src={hamburger} alt="Menu" className="menu-icon" />
+                    {menuOpen ? (
+                        <img src={cross} alt="Close" className="close-icon" />
+                    ) : (
+                        <img src={hamburger} alt="Menu" className="menu-icon" />
+                    )}
                 </label>
-                
+                <img src={logo} alt="Logo" id="image-logo" /> 
                 <label className="logo">AudioBytes</label>
                 <ul className={menuOpen ? 'show' : ''}>
                     <li><ScrollLink to="home" smooth={true} duration={2000} onClick={handleCloseMenu}>Home</ScrollLink></li>
